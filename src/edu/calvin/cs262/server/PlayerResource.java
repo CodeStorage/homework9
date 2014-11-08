@@ -14,4 +14,11 @@ public class PlayerResource {
 	public String helloRest() {
 		return "Hello, REST server!";
 	}
+	
+	@GET
+	@Path("/default")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Player retrievePlayer() {
+		return new Player();
+	}
 }
